@@ -34,6 +34,9 @@ Route::get('login', function () {
     return view('login');
 });
 
+Route::get('todolist', function () {
+    return view('todolist');
+});
 
 // Route di bawah ini berfunsi untuk menjalankan class index pada Controller "UserController" 
 // ketika url "localhost:8000/user" diakses
@@ -68,25 +71,27 @@ Route::permanentRedirect('/permanentredirect', '/return301');
 // //Route::post('request/post-data', [App\Http\Controllers\RequestController::class, 'processPostData']);
 
 
-// pengimplementasian named route
-Route::get('/user/profile', [App\Http\Controllers\PenggunaController::class, 'index'])->name('profile');
+// // pengimplementasian named route
+// Route::get('/user/profile', [App\Http\Controllers\PenggunaController::class, 'index'])->name('profile');
 
 
-Route::get('/user/{id}/profile', function(){
+// Route::get('/user/{id}/profile', function(){
 
-})->name('profile');
+// })->name('profile');
 
-$url = route('profile', ['id'=>1, 'photos' => 'yes']);
+// $url = route('profile', ['id'=>1, 'photos' => 'yes']);
 
 
-// pengimplementasian group routing
 
-Route::middleware(['first', 'second'])->group(function () {
-    Route::get('/', function () {
-        return view('login');
-    });
 
-    Route::get('/user/profile', function(){
-        return "welcome to profile";
-    });
-});
+// // pengimplementasian group routing
+
+// Route::middleware(['first', 'second'])->group(function () {
+//     Route::get('/', function () {
+//         return view('login');
+//     });
+
+//     Route::get('/user/profile', function(){
+//         return "welcome to profile";
+//     });
+// });

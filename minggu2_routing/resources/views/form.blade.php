@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Form</title>
-</head>
 <body>
  
 	<form action="/form/proses" method="post">

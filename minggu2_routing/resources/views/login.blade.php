@@ -1,3 +1,5 @@
+// syntak di bawah ini adalah tampilan login
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
